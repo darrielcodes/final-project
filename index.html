@@ -28,13 +28,6 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#">Profile</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Change view</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">light mode</a>
-                      <a class="dropdown-item" href="#">dark mode</a>
-                    </div>
-                  </li>
               </ul>
             </div>
             <form class="form-inline">
@@ -44,8 +37,8 @@
           </nav>
     </div>
 <br>
-<div class="d-inline-flex">
-    <div class="card text-bg-light border-dark  mb-3 d-inline-block d-flex justify-content-start align-self-start position-fixed top-10 start-0 " style="width: 15rem;">
+<div class="d-inline-flex container-fluid">
+    <div class="card text-bg-light border-dark  mb-3 d-inline-block d-flex justify-content-start align-self-start position-sticky top-10 start-0 " style="width: 15rem;">
         <img class="card-img-top img-thumbnail rounded mx-auto d-block" src="http://inkwellideas.com/wp-content/uploads/2010/12/superhero.png" style="width: 100px;" alt="Card image cap">
         <div class="card-header" style="text-align: center;">@BasicSuperHero_101</div>
         <div class="card-body">
@@ -61,26 +54,22 @@
       </div>
 
         
-      <div class="">
-            <h3 class="d-flex justify-content-center align-self-center position-absolute top-10 start-50 translate-middle-x">Current tweets</h3>
-
-        
-      <ul class="list-group d-inline-block container d-flex justify-conetent-end align-self-center position-absolute top-10 start-50 translate-middle-x" style="width: 60%;">
-      </ul>
+      <div class="d-inline-block d-flex justify-content-center position-sticky" style="width: 60%;">
+      <h3 class="d-inline-block d-flex list-group-item-heading">Current tweets</h3>
+      <ul class="list-group"></ul>
     </div>
    
-    <div class="card d-inline-block d-flex justify-content-end align-self-start position-fixed top-10 end-0" style="width: 15rem;">
+    <div class="card text-bg-light border-dark  mb-3 d-inline-block d-flex justify-content-end align-self-start position-sticky top-10 end-0 crimeCard" style="width: 15rem;">
         <img class="card-img-top img-thumbnail" id="crimeImg" src="https://thumbs.dreamstime.com/b/government-report-top-secret-seal-stamped-folder-important-documents-stock-photo-151817596.jpg" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title" style="text-align: center;">Save the day?</h5>
+          <h5 class="card-title saveDay" style="text-align: center;">Save the day?</h5>
           <p class="card-text missionDetails" style="text-align: center;">Click the button for a nearby crime needing your help!</p>
         </div>
-        <ul class="list-group list-group-flush displayInfo">
+        <ul class="list-group list-group-flush displayInfo" style="text-align: center; margin: 10px;">
           
         </ul>
         <div class="card-body">
           <button id="mission" class="btn btn-warning" style="margin-left: 50px; margin-top: 10px;">Get mission</button>
-         
         </div>
       </div>
 
