@@ -63,6 +63,7 @@ submitTweet.addEventListener('click', (event) => {
 //////////////
 let randomIndex = () => {
     let random = Math.floor(Math.random() * 20);
+    console.log(random)
     return random
     
 };
@@ -82,12 +83,13 @@ let missionControls = () => {
        destruct.innerText = 'THIS MISSION WILL SELF DESTRUCT IN 5 SECONDS.'
        details.innerText = ''
        setTimeout(() => {
-        crimeCard.style.display = 'none'
+        crimeCard.style.opacity = '0'
        },5000)
     })
     decline.addEventListener('click', () => {
         crimeImg.src = 'https://m.media-amazon.com/images/M/MV5BMTU4Mjg2NzktYjBmYy00NjRmLWE5ZWMtZWM5Nzk1MDY1ZDcxXkEyXkFqcGdeQXVyNTk4NTY2Nzc@._V1_FMjpg_UX1000_.jpg';
         displayInfo.innerText = 'Challenge declined.'
+        getMission.disabled = false;
     })
 
     return accept
@@ -145,7 +147,8 @@ let getCrime = async() => {
 ///////////////////////////
 getMission.addEventListener('click', () => {
     if (reward !== null){
-    details.innerText = `${reward}`
+        console.log('test');
+    details.innerText = reward;
     let info = document.createElement('li');
     info.className = "list-group-item";
     info.innerText = `NAME: ${name}
@@ -156,15 +159,12 @@ getMission.addEventListener('click', () => {
     getMission.disabled = true;
    /////accept/decline buttons//////////
     missionControls();
-    details.innerText = ''
-    info.innerText = ''
-    displayInfo.appendChild(info)
 }
     else{
+        console.log('test2');
     details.innerText = 'REWARD OFFERED'
     let info2 = document.createElement('li');
     info2.className = "list-group-item";
-    crimeImg.src = image;
     info2.innerText = `NAME: ${name}
     DESCRIPTION: ${description}`
     crimeImg.src = image;
@@ -172,13 +172,13 @@ getMission.addEventListener('click', () => {
     getMission.disabled = true;
     missionControls();
     }
+
     console.log(reward);
     console.log(accessData);
 
     
 })
-
-
-
 }
+
+
 getCrime();
