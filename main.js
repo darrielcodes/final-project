@@ -127,6 +127,7 @@ newImg.style.width = '1px';
 newTweet.appendChild(newImg);
 newTweet.appendChild(fullInfo)
 tweetDisplay.insertBefore(newTweet, tweetDisplay.children[0])
+//tweetDisplay.appendChild(newTweet)
 console.log(newTweet)
     }, 2500 * i)
 }
