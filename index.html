@@ -37,9 +37,10 @@
           </nav>
     </div>
 <br>
-<div class="d-inline-flex container-fluid">
-    <div class="card text-bg-light border-dark  mb-3 d-inline-block d-flex justify-content-start align-self-start position-fixed top-10 start-0 " style="width: 15rem;">
-        <img class="card-img-top img-thumbnail rounded mx-auto d-block" src="http://inkwellideas.com/wp-content/uploads/2010/12/superhero.png" style="width: 100px;" alt="Card image cap">
+<div class="d-flex justify-content-center container-fluid">
+    <div class="row align-items-start">
+    <div class="col text-center card text-bg-light border-dark position-fixed" style="max-width: 20%; max-height: 40%; top: 10; left: 0; bottom: 10; margin: 10px; margin-bottom: 20px;">
+        <img class="card-img-top img-thumbnail rounded mx-auto d-block" src="http://inkwellideas.com/wp-content/uploads/2010/12/superhero.png" style="width: 50px;" alt="Card image cap">
         <div class="card-header" style="text-align: center;">@BasicSuperHero_101</div>
         <div class="card-body">
           <form>
@@ -47,30 +48,50 @@
                 <label style="margin: 10px; text-align: center;">What's on your mind today?</label>
                 <input class="form-control" id="userInput" type="text" placeholder="type here"></textarea>
                 
-                <button type="submit" id="submit" class="btn btn-primary" style="margin-left: 50px; margin-top: 10px;">Submit</button>
+                <button type="submit" id="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
               </div>
             </form>
         </div>
       </div>
 
+      <div class="row align-items-end">
+      <div class="col text-center card text-bg-light border-dark position-fixed" style="max-width: 20%; max-height: fit-content; top: 10; left: 0; bottom: 0; margin: 10px; margin-bottom: 10px; margin-top: 50px;">
+        <img class="card-img-top img-thumbnail rounded mx-auto d-block statImg" src="https://media2.giphy.com/media/VGiAk8CLVqlFF4N2Mi/giphy.gif?cid=ecf05e47c8d5b5i4w3sbvvaub2aulwqasgpq2owke61ckmaa&rid=giphy.gif&ct=s" style="width: 80px;" alt="Card image cap">
+        <div class="card-header" style="text-align: center;" id="displayName">Get stats</div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+                <div class="getStats ">
+            
+                </div>
+                <input class="form-control" id="statInput" type="text" placeholder="Select a user tweet"></textarea>
+                
+                <button type="submit" id="submitStat" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+              </div>
+            </form>
+        </div>
+      </div>
+      </div>
+    </div>
         
-      <div class="d-inline-block d-flex justify-content-center position-static container" style="width: 60%;">
+      <div class="position-sticky container" style="max-width: 60%; top: 0; padding-left: 35px;">
+        <h3 class="list-group-item-heading" style="margin: -20px; top: 0; text-align: center;">Current tweets</h3>
+      <ul class="list-group" style="margin-top: 50px;">
+    </ul>
       
-      <ul class="list-group" style="margin-top: 50px;"></ul>
-      <h3 class="list-group-item-heading position-absolute" style="margin: -20px">Current tweets</h3>
     </div>
    
-    <div class="card text-bg-light border-dark  mb-3 d-inline-block d-flex justify-content-end align-self-start position-fixed top-10 end-0 crimeCard bg-image" style="width: 15rem;">
+    <div class="card text-center text-bg-light border-dark  bg-image position-fixed crimeCard container scroll overflow-auto" style="max-width: 20%; max-height: 70%;top: 10; left: 90; right: 0; margin: 10px;">
         <img class="card-img-top img-thumbnail" id="crimeImg" src="https://thumbs.dreamstime.com/b/government-report-top-secret-seal-stamped-folder-important-documents-stock-photo-151817596.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title saveDay" style="text-align: center;">Save the day?</h5>
           <p class="card-text missionDetails" style="text-align: center;">Click the button for a nearby crime needing your help!</p>
         </div>
-        <ul class="list-group list-group-flush displayInfo" style="text-align: center; margin: 10px;">
+        <ul class="list-group list-group-flush displayInfo" style="text-align: center; ">
           
         </ul>
         <div class="card-body">
-          <button id="mission" class="btn btn-warning" style="margin-left: 50px; margin-top: 10px;">Get mission</button>
+          <button id="mission" class="btn btn-warning" style="margin-top: 10px;">Get mission</button>
         </div>
       </div>
 
