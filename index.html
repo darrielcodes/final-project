@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Metaverse Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body style="background: linear-gradient(90deg, rgba(134,147,171,1) 0%, rgba(189,212,231,1) 100%);">
     <div id="nav">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
             <a class="navbar-brand" href="#">
                 <img src="https://thumbs.dreamstime.com/b/black-background-white-letter-m-grunge-alphabet-logo-design-icon-company-suitable-as-logotype-164436561.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
                 Metaverse
@@ -40,13 +40,13 @@
 <div class="d-flex justify-content-center container-fluid">
     <div class="row align-items-start">
     <div class="col text-center card text-bg-light border-dark position-fixed" style="max-width: 20%; max-height: 40%; top: 10; left: 0; bottom: 10; margin: 10px; margin-bottom: 20px;">
-        <img class="card-img-top img-thumbnail rounded mx-auto d-block" src="http://inkwellideas.com/wp-content/uploads/2010/12/superhero.png" style="width: 50px;" alt="Card image cap">
+        <img class="card-img-top img-thumbnail rounded mx-auto d-block" src="http://inkwellideas.com/wp-content/uploads/2010/12/superhero.png" style="width: 100px;" alt="Card image cap">
         <div class="card-header" style="text-align: center;">@BasicSuperHero_101</div>
         <div class="card-body">
           <form>
             <div class="form-group">
                 <label style="margin: 10px; text-align: center;">What's on your mind today?</label>
-                <input class="form-control" id="userInput" type="text" placeholder="type here"></textarea>
+                <input class="form-control" id="userInput" type="text" placeholder="type here" style="border: 1px solid rgba(81, 203, 238, 1);"></textarea>
                 
                 <button type="submit" id="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
               </div>
@@ -56,17 +56,18 @@
 
       <div class="row align-items-end">
       <div class="col text-center card text-bg-light border-dark position-fixed" style="max-width: 20%; max-height: fit-content; top: 10; left: 0; bottom: 0; margin: 10px; margin-bottom: 10px; margin-top: 50px;">
-        <img class="card-img-top img-thumbnail rounded mx-auto d-block statImg" src="https://media2.giphy.com/media/VGiAk8CLVqlFF4N2Mi/giphy.gif?cid=ecf05e47c8d5b5i4w3sbvvaub2aulwqasgpq2owke61ckmaa&rid=giphy.gif&ct=s" style="width: 80px;" alt="Card image cap">
-        <div class="card-header" style="text-align: center;" id="displayName">Get stats</div>
+        <img class="card-img-top img-thumbnail rounded mx-auto d-block statImg" src="https://media2.giphy.com/media/VGiAk8CLVqlFF4N2Mi/giphy.gif?cid=ecf05e47c8d5b5i4w3sbvvaub2aulwqasgpq2owke61ckmaa&rid=giphy.gif&ct=s" style="width: 100px;" alt="Card image cap">
+        <div class="card-header" style="text-align: center;" id="displayName">See more info?</div>
         <div class="card-body">
           <form>
             <div class="form-group">
                 <div class="getStats ">
             
                 </div>
-                <input class="form-control" id="statInput" type="text" placeholder="Select a user tweet"></textarea>
-                
-                <button type="submit" id="submitStat" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+                <fieldset disabled="disabled">
+                <input class="form-control " id="statInput" type="text" placeholder="Select a user" style="border: 1px solid black;"></textarea>
+            </fieldset>
+                <button type="submit" id="submitStat" class="btn btn-warning" style="margin-top: 10px;">Get stats</button>
               </div>
             </form>
         </div>
@@ -75,13 +76,13 @@
     </div>
         
       <div class="position-sticky container" style="max-width: 60%; top: 0; padding-left: 35px;">
-        <h3 class="list-group-item-heading" style="margin: -20px; top: 0; text-align: center;">Current tweets</h3>
-      <ul class="list-group" style="margin-top: 50px;">
+        <h3 class="list-group-item-heading h3 font-weight-bold display-6" style="margin-top: 20px; top: 0; text-align: center;">Current tweets</h3>
+      <ul class="list-group " style="margin-top: 20px;">
     </ul>
       
     </div>
-   
-    <div class="card text-center text-bg-light border-dark  bg-image position-fixed crimeCard container scroll overflow-auto" style="max-width: 20%; max-height: 70%;top: 10; left: 90; right: 0; margin: 10px;">
+    <div class="row align-items-end">
+    <div class="card text-center text-bg-light border-dark  bg-image position-fixed crimeCard container scroll overflow-auto" style="max-width: 20%; max-height: 40%; bottom: 0; right: 0; top: 0; margin: 10px; margin-top: 7%;">
         <img class="card-img-top img-thumbnail" id="crimeImg" src="https://thumbs.dreamstime.com/b/government-report-top-secret-seal-stamped-folder-important-documents-stock-photo-151817596.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title saveDay" style="text-align: center;">Save the day?</h5>
@@ -91,11 +92,31 @@
           
         </ul>
         <div class="card-body">
-          <button id="mission" class="btn btn-warning" style="margin-top: 10px;">Get mission</button>
+          <button id="mission" class="btn btn-danger" style="margin-top: 10px;">Get mission</button>
         </div>
       </div>
+    </div>
 
-
+      <div class="row align-items-end">
+        <div class="col text-center card text-bg-light border-dark position-fixed" style="max-width: 20%; max-height: fit-content; bottom: 0; left: 90; right: 0; margin: 10px;">
+          <img class="card-img-top img-thumbnail rounded mx-auto d-block sdkickImg" src="https://onlinegiftools.com/images/examples-onlinegiftools/random-color.gif" style="width: 100px;" alt="Card image cap">
+          <div class="card-header" style="text-align: center;" id="displaySidekick">Do you need a sidekick for your mission?</div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                  <div>
+              <p class="getSdKick"></p>
+                  </div>
+                  
+                  <div class="displayInfo2">
+                  <button type="button" id="submitsdKick" class="btn btn-info" style="margin-top: 10px;">Get random</button>
+                  </div>
+                </div>
+              </form>
+          </div>
+        </div>
+        </div>
+      </div>
 
 
 
