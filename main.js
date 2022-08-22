@@ -17,8 +17,6 @@ let displaySidekick = document.querySelector('#displaySidekick')
 let submitsdKick = document.querySelector('#submitsdKick')
 let getSdKick = document.querySelector('.getSdKick')
 let displayInfo2 = document.querySelector('.displayInfo2');
-//////////////////VARIABLES//////////////////////
-
 
 /////////////USER TWEET/////////////////////////
 submitTweet.addEventListener('click', (event) => {
@@ -72,14 +70,14 @@ submitTweet.addEventListener('click', (event) => {
     })  
     }
 });
-//////////////
+//////////////////////////////////////////
 let randomIndex = () => {
     for(let i = 0; i < 20; i++){
     let random = Math.floor(Math.random() * 20);
     return random
     }
 };
-////////////////
+////////////////////////////////////////////
 let missionControls = () => {
     let accept = document.createElement('button');
     accept.innerText = 'ACCEPT'
@@ -108,7 +106,6 @@ let missionControls = () => {
 };
 
 let submitControls = () => {
-    // statInput.className = 'blinking'
     let accept = document.createElement('button');
     accept.innerText = 'Accept'
     accept.className = 'btn btn-primary'
@@ -183,7 +180,7 @@ submitStat.addEventListener('click', (e) => {
             console.log(submit)
         }
 });
-
+////////////////////////////////////////////////////////
 newTweet.style.cursor = 'pointer'
 newTweet.addEventListener('click', () => {
     if (newTweet.style.opacity !== '0.5'){
@@ -196,7 +193,7 @@ newTweet.addEventListener('click', () => {
     statInput.value = name
     console.log(newTweet)
 });
-
+////////////////////////////////////////////////////////
 submitsdKick.addEventListener('click', (e) => {
     e.preventDefault();
     displaySidekick.innerText = "Loading..."
@@ -224,7 +221,7 @@ submitsdKick.addEventListener('click', (e) => {
 }
 };
 getNewTweet();
-
+////////////////////////////////////////////////////////
 let getCrime = async() => {
     let raw = await fetch('https://api.fbi.gov/wanted/v1/list');
     let data = await raw.json();
@@ -234,7 +231,7 @@ let getCrime = async() => {
     let reward = accessData.reward_text
     let description = accessData.description;
     let image = accessData.images[0].original;
-//////////////////////////
+////////////////////////////////////////
 getMission.addEventListener('click', () => {
     if (reward !== null){
         console.log('test');

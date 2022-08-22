@@ -1,44 +1,23 @@
 # Final Project
 
-In this project, you'll build a web application that does anything you want! 
+In this project, I built a superhero "twitter-verse" application. 
 
-It must meet the project requirements below, but beyond that, feel free to use your creativity to decide on what your app will do.
+The theme is based in a superhero world where the user is a starter superhero who can see their friend's updates, stats and more.
 
-## Requirements
+## Features
 
-* **Your app has at least three distinct "features"**
-  * If you are building a travel planning application, one feature could be allowing users to create a new trip
-* Your project contains a `README.md` file that explains what your project is and how to use it
-* Your project is hosted on GitHub pages
-* Your code is clean
-  * Proper indentation
-  * No unnecessary repetition
-  * Variables as camelCase
+* View/display incoming tweets
+* Post/edit new tweets
+* View each profile's statistics
+* Get a nearby "mission" and sidekick for the mission
 
-## Project ideas
+## Stretch Goals
 
-* Travel planner
-* Budget manager
-* Resume builder
-* Shift scheduling app
-* Chat bot
-* Music making app
-* Games
-  * PacMan
-  * Chess
-* Do something with an external API: https://github.com/public-apis/public-apis
-  * Slack / discord bot
-  * Recreate Reddit
-  * Pokedex
+* Delete new tweets
+* Obtain more statistics 
+* Create messages page where sidekick messages go
 
-And so many more possibilities!
-
-## Recommendations
-
-* Start out by creating your project's foundation in HTML.
-* Frequently make commmits in git to save your progress.
-* Build one piece of Javascript functionality at a time, testing each change you make with `console.log`. 
-* Keep your code meticulously organized as you go. 
-* Use proper indentation, whitespace, and comments. 
-* Try to write a function for each separate piece of functionality that exists in your code. This will make your code "modular" and easier to build off of.
-* If you find yourself repeating code, think about how you could use either a loop or a new function to eliminate the repitition. DRY - Don't Repeat Yourself!
+## Current Known Bugs
+* Page not fully responsive
+* Tweets stay 1/2 opacity when clicked instead of only one
+* If you post a tweet, the stats section may be one user off
